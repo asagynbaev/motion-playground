@@ -4,73 +4,111 @@ MotionLanguage is a minimal, expressive DSL (domain-specific language) for descr
 
 ---
 
-## Features
-DSL Syntax
+## ✨ Features
+
+### ✅ DSL Syntax
 Simple motion commands:
-jump(up);, tremble(left);, breathe();
-
-Timed pauses:
-wait 300ms;, wait 2s;
-
-Control flow:
-
-sequence { ... } — run steps in order
-
-parallel { ... } — run steps simultaneously
-
-repeat(n) { ... } — repeat a block n times
-
-Reusable blocks:
-
-define name = { ... }
-
-name(); — invoke defined block
-
-## Example
-
-### Arguments
 ```motion
 jump(up);
-tremble(left);
-breathe();
+glow(red);
+bounce();
 ```
 
-### Timings
+Timed pauses:
 ```motion
-wait 500ms;
+wait 300ms;
 wait 2s;
 ```
 
-### Composite Blocks
+Control flow:
 ```motion
-sequence {
-  jump(up);
-  wait 300ms;
-  breathe();
-}
-
-parallel {
-  jump(left);
-  tremble(right);
-}
-
-repeat(3) {
-  jump(up);
-  wait 100ms;
-}
+sequence { ... }    // Run steps in order
+parallel { ... }    // Run steps simultaneously
+repeat(3) { ... }   // Repeat a block n times
 ```
 
-### Parsing
-- Built with Peggy (PEG.js successor)
-- Generates an abstract syntax tree (AST)
-- Provides detailed error messages with line/column locations
+Reusable blocks:
+```motion
+define name = {
+  bounce();
+  wait(200ms);
+}
 
-### Editor Integration
-- Integrated with Monaco Editor
-- Custom syntax highlighting for motion commands, keywords, numbers, etc.
-- Real-time syntax validation with inline error markers
+name();
+```
 
-### Editor Integration
-- Integrated with Monaco Editor
-- Custom syntax highlighting for motion commands, keywords, numbers, etc.
-- Real-time syntax validation with inline error markers
+### 🎨 Canvas Animations
+Powered by `<canvas>`:
+- `glow(color)` – glowing box
+- `bounce()` – vertical jump
+- `wave()` – shake left/right
+- `sparkle()` – brief flash circle
+
+### 🔠 Command Library
+Supported commands:
+- `jump(up/down)`
+- `tremble(left/right)`
+- `breathe()`
+- `rotate(clockwise/counterclockwise)`
+- `slide(left/right)`
+- `scale(number)`
+- `glow(color)`
+- `bounce()`
+- `wave()`
+- `sparkle()`
+- `wait(duration)` (e.g. `300ms`, `2s`)
+
+### 🧠 Define Blocks (macros)
+You can define reusable blocks with:
+```motion
+define spin = {
+  rotate(clockwise);
+  wait(1s);
+}
+
+spin();
+```
+_Note: Argument support is not yet available._
+
+### 🛠 Parsing
+- Built with [Peggy](https://peggyjs.org) (PEG.js successor)
+- Generates a clean abstract syntax tree (AST)
+- Provides line/column error locations
+
+### 🧩 Editor Integration
+- Uses Monaco Editor
+- Live syntax validation
+- Custom highlighting for:
+  - Keywords (`define`, `repeat`, ...)
+  - Commands (`jump`, `glow`, ...)
+  - Directions (`up`, `left`, ...)
+  - Durations (`500ms`, `2s`)
+  - Colors (`red`, `blue`, ...)
+
+---
+
+## ✅ Example
+```motion
+sequence {
+  glow(red);
+  jump(up);
+  wait(500ms);
+  sparkle();
+}
+
+repeat(2) {
+  bounce();
+  wait(300ms);
+}
+
+define pulse = {
+  scale(1.5);
+  wait(400ms);
+}
+
+pulse();
+```
+
+---
+
+Start creating animated motion logic with zero boilerplate, rich canvas effects, and visual flow control — all in a friendly DSL ✨
