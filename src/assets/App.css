@@ -1,0 +1,84 @@
+.app {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 300px;
+  margin-right: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.commands {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+pre {
+  text-align: left;
+  margin-top: 2rem;
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.9rem;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1rem;
+}
+
+.controls input[type="checkbox"] {
+  transform: scale(1.1);
+  margin: 0;
+  vertical-align: middle;
+}
+
+.play-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.editor-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+.ast-tree {
+  background: #eef;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  text-align: left;
+  font-family: monospace;
+}

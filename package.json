@@ -1,0 +1,19 @@
+{
+  "name": "motion-playground",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "gen": "node generate-parser.mjs"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "peggy": "^3.0.2",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "framer-motion": "^12.16.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}
