@@ -6,9 +6,9 @@
     "gen": "node generate-parser.mjs"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.0.0",
+    "@vitejs/plugin-react": "^6.0.3",
     "peggy": "^3.0.2",
-    "vite": "^6.4.2"
+    "vite": "^8.1.1"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",
